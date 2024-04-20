@@ -30,7 +30,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,8 +45,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <div class="content">
          
         <a href="home.php" class="btn primary_btn">Home</a>
-        <a href="Services.php" class="btn primary_btn">Recommend Me</a>
-        <a href="history.php" class="btn primary_btn">Saved</a>
+        <a href="recommend.php" class="btn primary_btn">Recommend Me</a>
+        <a href="saved.php" class="btn primary_btn">Saved</a>
         <a href="changepassword.php" class="btn primary_btn">Change Password</a>
         <a href="logout.php" class="btn primary_btn">Logout</a>
 </div>

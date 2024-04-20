@@ -1,18 +1,10 @@
 <?php
-
-require "algorithm.php";
+session_start();
 
 if((isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
     header('location: login.php');
 }
-
 ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,55 +147,29 @@ h2::after {
       <div class="carousel-inner">
         <div class="item carousel-item active">
           <div class="row">
-            <?php
-                                $recommendedVideoIds = implode(",", $recommendation);
-                                $query = "SELECT * FROM video WHERE videoid IN ($recommendedVideoIds)";
-                                $result = mysqli_query($conn, $query);
-                                if ($result) {
-                                    while ($videoRow = mysqli_fetch_assoc($result)) {
-                                ?>
-                                        <div class="col-sm-3">
-                                            <div class="thumb-wrapper">
-                                                <div class="img-box">
-                                                </div>
-                                                <div class="thumb-content">
-                                                    <h4><?php echo $videoRow['title']; ?></h4>
-                                                    <p><?php echo $videoRow['description']; ?></p>
-                                                    <a href="<?php echo $videoRow['link']; ?>" class="btn btn-primary">Show</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                <?php
-                                    }
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-sm-3">
+              <div class="thumb-wrapper">
+                <div class="img-box">
+                  <img src="" class="img-fluid" alt="">                 
                 </div>
+                <div class="thumb-content">
+                  <h4>Makeup Video</h4>                 
+      
+                  <a href="#" class="btn btn-primary">Show</a>
+                </div>            
+              </div>
             </div>
-        </div>
-    </div>
-</body>
-</html>
-This code addresses the previous issues and suggestions, including:
-
-Proper mysqli error handling.
-Correct database connection.
-Image source is set to the actual URL.
-Dynamic number of recommended videos.
-Improved user input preprocessing and content-based recommendation.
-
-
-
-
-
-                }
-              }
-
-              ?>
-             
-            
+            <div class="col-sm-3">
+              <div class="thumb-wrapper">
+                <div class="img-box">
+                  <img src="" class="img-fluid" alt="">                 
+                </div>
+                <div class="thumb-content">
+                  <h4>Hair video</h4>                 
+                  <a href="#" class="btn btn-primary">Show</a>
+                </div>            
+              </div>
+            </div>  
     </div>
     </div>
   </div>

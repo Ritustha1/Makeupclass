@@ -34,7 +34,7 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
 <body>
   <div class="container">
 <div class="content">
-    
+
         <h3>User<span>Page</span></h3>
         <h1>Welcome <span><?php echo $_SESSION['username']; ?></span></h1>
         <p>This is our user page </p>
@@ -49,45 +49,46 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
 
 <div class="container-form">
   <h2>Recommend Me</h2>
-  <form class="form-horizontal" action="RecommendPage.php" method="post">
+  <form class="form-horizontal" action="userpage.php" method="post">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Category:</label>
       <div class="col-sm-10">
         <select class="form-control" id="course" name="course">
-          <option value="1">simple makeup</option>
-          <option value="2">bridal makeup</option>
-          <option value="3">professional makeup</option>
-          <option value="4">creative makeup</option>
+          <option value="1">simple</option>
+          <option value="2">bridal</option>
+          <option value="3">professional</option>
+          <option value="4">creative</option>
+          <option value="4">smokey eye makeup</option>
         </select>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="skintype">Skin type:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="skin type" placeholder="skintype" name="type">
+        <input type="text" class="form-control" id="skin type" placeholder="skintype" name="skintype">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="brand">Brand name:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="brand" placeholder="Brand name" name="type">
+        <input type="text" class="form-control" id="brand" placeholder="Brand name" name="brandname">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="style">Style:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="style" placeholder="style" name="type">
+        <input type="text" class="form-control" id="style" placeholder="style" name="style">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="description">Description:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="description" placeholder="description" name="type">
+        <input type="text" class="form-control" id="description" placeholder="description" name="description">
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
+        <input name="submit" type="submit" class="btn btn-default">
       </div>
     </div>
   </form>
